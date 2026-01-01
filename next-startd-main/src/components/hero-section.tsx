@@ -26,7 +26,7 @@ const itemVariants = {
     y: 0,
     transition: {
       duration: 0.8,
-      ease: [0.25, 0.4, 0.25, 1],
+      ease: [0.25, 0.4, 0.25, 1] as const,
     },
   },
 };
@@ -42,7 +42,7 @@ const phoneVariants = {
     transition: {
       duration: 0.6,
       delay: 0.8,
-      ease: [0.25, 0.4, 0.25, 1],
+      ease: [0.25, 0.4, 0.25, 1] as const,
     },
   },
 };
@@ -61,7 +61,7 @@ const scrollIndicatorVariants = {
     transition: {
       duration: 1.5,
       repeat: Infinity,
-      ease: "easeInOut",
+      ease: "easeInOut" as const,
     },
   },
 };
@@ -72,7 +72,7 @@ export default function HeroSection() {
   // Reduced motion 시 정적 렌더링
   if (prefersReducedMotion) {
     return (
-      <section className="relative min-h-[100dvh] flex items-center justify-center bg-primary">
+      <section className="relative min-h-dvh flex items-center justify-center bg-primary">
         <div className="relative z-10 max-w-4xl mx-auto px-6 sm:px-8 text-center pt-12">
           <h1 className="heading-display text-white mb-6 whitespace-pre-line">
             {SITE_DATA.hero.title}
@@ -97,7 +97,7 @@ export default function HeroSection() {
           <div className="mt-16">
             <a
               href={`tel:${SITE_DATA.phone}`}
-              className="text-2xl sm:text-3xl font-semibold text-accent-light hover:text-accent transition-colors"
+              className="text-2xl sm:text-3xl font-semibold text-highlight hover:text-highlight-light transition-colors"
             >
               {SITE_DATA.phone}
             </a>
@@ -113,7 +113,7 @@ export default function HeroSection() {
   }
 
   return (
-    <section className="relative min-h-[100dvh] flex items-center justify-center bg-primary overflow-hidden">
+    <section className="relative min-h-dvh flex items-center justify-center bg-primary overflow-hidden">
       {/* 배경 장식 효과 */}
       <motion.div
         className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--color-accent)/15,_transparent_50%)]"
@@ -181,7 +181,7 @@ export default function HeroSection() {
         <motion.div className="mt-16" variants={phoneVariants}>
           <motion.a
             href={`tel:${SITE_DATA.phone}`}
-            className="text-2xl sm:text-3xl font-semibold text-accent-light inline-block"
+            className="text-2xl sm:text-3xl font-semibold text-highlight inline-block"
             whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.2 }}
           >

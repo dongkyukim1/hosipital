@@ -183,7 +183,7 @@ export default function AboutSection() {
 
       {/* 컨텐츠 */}
       <div className="relative z-10 max-w-4xl mx-auto px-6 sm:px-8 text-center">
-        <p className="label text-accent-light mb-4">
+        <p className="label text-highlight mb-4">
           About Us
         </p>
         <h2 id="about-heading" className="heading-1 text-white mb-8">

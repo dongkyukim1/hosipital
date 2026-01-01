@@ -49,7 +49,7 @@ export function SectionHeader({
         <p
           className={cn(
             "label mb-4",
-            isLight ? "text-accent" : "text-accent-light"
+            isLight ? "text-accent" : "text-highlight"
           )}
         >
           {label}
