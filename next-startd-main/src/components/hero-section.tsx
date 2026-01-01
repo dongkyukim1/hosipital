@@ -116,14 +116,14 @@ export default function HeroSection() {
     <section className="relative min-h-dvh flex items-center justify-center bg-primary overflow-hidden">
       {/* 배경 장식 효과 */}
       <motion.div
-        className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--color-accent)/15,_transparent_50%)]"
+        className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,var(--color-accent)/15,transparent_50%)]"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.5 }}
         aria-hidden="true"
       />
       <motion.div
-        className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--color-highlight)/10,_transparent_50%)]"
+        className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,var(--color-highlight)/10,transparent_50%)]"
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.8 }}
         transition={{ duration: 2, delay: 0.5 }}
